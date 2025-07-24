@@ -1,0 +1,114 @@
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: hsl(190, 91%, 78%);
+    padding: 10px 0;
+    z-index: 2;
+    color: white;
+    transition: hsl(190, 91%, 78%) 0.3s;
+    display: flex;
+    align-items: center;
+    height: 65px;
+    box-shadow: 10;
+    position: sticky;
+    transition: 0.3s all ease;
+}
+
+[data-theme='light'] {
+	--background: #4a7bbd;
+	--shadow: rgba(0, 0, 0, 0.2);
+	--buttons: #e2e4f6;
+	--text: #e2e4f6;
+	--text-primary: #4a7bbd;
+	--filter: brightness(70%);
+	--borders: #325778;
+	--hover-text: #d7ac37;
+	--about-text: #ffffff;
+	--about-link: #d7ac37;
+	--menu-text: #ffffff;
+	--card-hover: #e8ebf0; /* Darker gray for more prominent glow */
+	--card-shadow: rgba(0, 0, 0, 0.1);
+	--hover-border: #ffbb00; /* Darker blue for border in light mode */
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin-left: 20px;
+    color: hsl(0, 100%, 99%)
+}
+
+#menu:hover{
+    color: hsl(0, 0%, 63%)
+}
+
+.menu{
+    position: fixed;
+    top: 68px;
+    left: -240px;
+    height: 100%;
+    width: 220px;
+    background-color: var(--background);
+    opacity: 0;
+    line-height: 3em;
+    padding: 1.5em;
+    z-index: 3;
+}
+
+.menu-show{
+    left: -20px;
+	opacity: 0.97;
+	animation-name: enter;
+	animation-duration: 0.5s;
+	z-index: 3;
+    opacity: 1;
+}
+
+.menu-hide {
+	animation-name: exit;
+	animation-duration: 0.5s;
+    opacity: 0;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu a{
+    font-size: 1.4em;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--menu-text);
+    transition: all 0.4s ease 0s;
+}
+
+.menu a:hover{
+    color: var(--menu-text);
+}
+
+.menu-bar:hover {
+	transform: scale(1.15);
+	transition: 0.4s ease-in;
+}
+
+.menu-bar a {
+	text-decoration: none;
+	color: var(--text-primary);
+	font-weight: 500;
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+	transition: all 0.3s ease;
+}
+
+.menu-bar a:hover {
+	background-color: var(--button);
+	transform: translateY(-2px);
+}
+
+.menu-bar a.active {
+	background-color: var(--button);
+	font-weight: 600;
+}
+
