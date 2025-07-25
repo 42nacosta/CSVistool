@@ -1,13 +1,13 @@
-document.getElementById("menu-bar").addEventListener("click", function() {
-    const menu = document.getElementById("menu-container");
-    console.log(menu)
+document.getElementById("menu-bar").addEventListener("click", () => {
+  const menu = document.getElementById("menu-container");
+  menu.classList.toggle("show");
+  menu.classList.toggle("hide");
+  console.log(menu);
+});
 
-    // Option 1: Toggle between two specific classes
-    if (menu.classList.contains("menu-hide")) {
-      menu.classList.remove("menu-hide");
-      menu.classList.add("menu-show");
-    } else {
-      menu.classList.remove("menu-show");
-      menu.classList.add("menu-hide");
-    }
-  });
+document.getElementById("theme").addEventListener("click", () => {
+  const menu = document.getElementById("data-theme");
+  menu.classList.toggle("light");
+  menu.classList.toggle("dark");
+  console.log(menu);
+});
