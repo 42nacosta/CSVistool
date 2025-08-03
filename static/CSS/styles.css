@@ -1,0 +1,507 @@
+[data-theme='light'] {
+	--background: #4a7bbd;
+	--shadow: rgba(0, 0, 0, 0.2);
+	--buttons: #e2e4f6;
+	--text: #e2e4f6;
+	--text-primary: #4a7bbd;
+	--filter: brightness(70%);
+	--borders: #325778;
+	--hover-text: #d7ac37;
+	--about-text: #ffffff;
+	--about-link: #d7ac37;
+	--menu-text: #ffffff;
+	--card-hover: #e8ebf0; /* Darker gray for more prominent glow */
+	--card-shadow: rgba(0, 0, 0, 0.1);
+	--hover-border: #ffbb00; /* Darker blue for border in light mode */
+}
+
+[data-theme=light] {
+    --primary: #2c3e50;
+    --control: #f5f7fa;
+    --border: #95989c;
+    --button: #f5f7fa;
+    --header: #4a7bbd;
+    --filter: brightness(90%);
+    --shadow: rgba(0, 0, 0, .1);
+    --slider: #3498db;
+    --play-button: #388e3c;
+    --pause-button: #d32f2f;
+}
+
+[data-theme='dark'] {
+	--background: #011228;
+	--shadow: rgba(0, 0, 0, 0.2);
+	--buttons: #1c375d;
+	--text: #e2e4f6;
+	--text-primary: #e2e4f6;
+	--filter: brightness(70%);
+	--borders: #172d4f;
+	--hover-text: #d7ac37;
+	--about-text: #e2e4f6;
+	--about-link: #3498db;
+	--menu-text: #e2e4f6;
+	--card-hover: #2c4d7d;
+	--card-shadow: rgba(255, 255, 255, 0.05);
+	--hover-border: #3498db;
+}
+
+[data-theme=dark] {
+    --primary: #f0f2f8;
+    --control: #011228;
+    --border: #4a5568;
+    --button: #2d3748;
+    --header: #011228;
+    --filter: brightness(120%);
+    --shadow: rgba(0, 0, 0, .3);
+    --slider: #3498db;
+    --play-button: #2e7d32;
+    --pause-button: #b71c1c;
+}
+
+.about {
+    font-family: 'Courier New', Courier, monospace;
+    font: monospace;
+    color: var(--about-text);
+    padding-left: 20px;
+}
+
+#root {
+    background-color: var(--background);
+    height: 100vh;
+    padding: 0px;
+    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+}
+
+#body {
+    font-family: 'Courier New', Courier, monospace;
+    font: monospace;
+	margin: 0;
+	padding: 0;
+	background-color: var(--background);
+	color: var(--primary);
+	line-height: 1.6;
+	letter-spacing: 0.01em;
+}
+
+.header {
+    position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: var(--borders);
+	padding: 10px 0;
+	z-index: 2;
+	color: var(--text);
+	transition: background-color 0.3s;
+	display: flex;
+	align-items: center;
+	height: 65px;
+	box-shadow: var(--nav-shadow);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	transition: all 0.3s ease;
+}
+
+.filter {
+	background-color: var(--buttons);
+    border: 2px solid var(--border);
+    border-radius: 40px;
+    color: var(--text-primary);
+    display: block;
+    font-size: 1.2em;
+    margin: 5%;
+    padding: .8rem 1rem;
+    width: 70%;
+    padding-left: 1rem;
+}
+
+.filter::placeholder {
+    color: var(--text-primary);
+}
+
+.side-panel {
+    justify-content: left;
+    align-items: left;
+    padding-left: 4rem;
+    
+}
+
+#blob-container {
+    align-items: flex-end;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    height: 160px;
+    justify-content: center;
+    left: 0;
+    margin-bottom: 4%;
+    margin-left: 11%;
+    opacity: 1;
+    pointer-events: none;
+    position: fixed;
+    text-align: left;
+    transition: .2s;
+    width: 160px;
+    z-index: 1;
+}
+
+div.header h1{
+    position: absolute;
+    top: 50%;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: nowrap;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin-left: 30px;
+    color: var(--text);
+}
+
+#menu:hover {
+    color: var(--hover-text);
+}
+
+.menu {
+    position: fixed;
+    top: 93px;
+    left: -240px;
+    height: 100%;
+    width: 220px;
+    background-color: var(--background);
+    opacity: 0;
+    line-height: 3em;
+    padding: 1.5em;
+    z-index: 3;
+}
+
+
+#menu-container ul {
+    list-style-type: none;
+    background-color: var(--background);
+}
+
+#menu-list a{
+    font-size: 1.4em;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--menu-text);
+    transition: all 0.4s ease 0s;
+}
+
+#menu-list a:hover{
+    color: var(--menu-text);
+}
+
+.menu-bar:hover {
+	transform: scale(1.15);
+	transition: 0.4s ease-in;
+	cursor: pointer;
+}
+
+.menu-bar a {
+	text-decoration: none;
+	color: var(--text-primary);
+	font-weight: 500;
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+	transition: all 0.3s ease;
+}
+
+.menu-bar a:hover {
+	background-color: var(--button);
+	transform: translateY(-2px);
+}
+
+
+.menu-bar a.active {
+	background-color: var(--button);
+	font-weight: 600;
+}
+
+.menu.show {
+    transform: translateX(230px);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.menu.hide {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.rotate-effect {
+    transition: transform 1.5s ease;
+}
+
+.rotate-effect:hover {
+    transform: rotate(360deg);
+	cursor: pointer;
+}
+
+.gimmicks {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	margin-right: 25px;
+    transform: translateX(90vw);
+}
+
+.mid-flex {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.inner-flex {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+	width: 100%;
+}
+
+.inner-flex button.button {
+	background: var(--buttons);
+    border: 1.5px solid var(--borders);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 4px 6px rgba(0,0,0,.1);
+    box-shadow: 0 2px 4px var(--card-shadow);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.4em;
+    font-weight: 700;
+    height: 210px;
+    justify-content: space-between;
+    margin: 5% 5% 5% 15%;
+    overflow: hidden;
+    padding: 10px;
+    pointer-events: auto;
+    transition: all .4s ease 0s;
+    width: 85%;
+	max-width: 600px;
+}
+
+.algo-name {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 10px 0;
+	text-align: center;
+}
+
+
+.algo-picture img {
+	align-items: center;
+	max-height: 100%;
+	max-width: 90%;
+	height: 40%;
+	width: 40%;
+	object-fit: contain;
+	transition: transform .3s ease;
+}
+.algo-container:hover .algo-picture img{
+	transform: scale(1.15);
+}
+
+.algo-container:active {
+    filter: brightness(85%);
+    transform: scale(0.95,0.95);
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+input {
+    text-rendering: auto;
+    color: var(--primary);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+.VisualizationMainPage #algoControlSection {
+    align-items: center;
+    background: var(--control);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 3px var(--shadow);
+    color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    transition: all .3s ease;
+}
+
+.VisualizationMainPage #AlgoSpecificControls{
+    color: var(--primary);
+    font-size: 18px;
+    padding: 5px;
+    transition: all .4s ease 0s;
+    vertical-align: middle;
+}
+
+.VisualizationMainPage .vgroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.VisualizationMainPage .hgroup {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.VisualizationMainPage input[type=button] {
+    background-color: var(--button);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px var(--shadow);
+    color: var(--primary);
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font: monospace;
+    margin: 5px;
+    padding: 8px 16px;
+    transition: all .2s ease;
+}
+
+.VisualizationMainPage input[type=button]:hover {
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
+}
+
+.VisualizationMainPage input[type=button]:active {
+    filter: brightness(85%);
+    transform: scale(0.95,0.95);
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.VisualizationMainPage input[type=Text] {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px;
+    color: black;
+}
+
+.VisualizationMainPage input[type=radio]:hover {
+    cursor: pointer;
+    transform: scale(1.05, 1.05);
+}
+
+.VisualizationMainPage .divisorLeft {
+    width: 15px;
+}
+
+.VisualizationMainPage .divisorRight {
+    width: 15px;
+    border-left: 2px solid var(--border);
+}
+
+.VisualizationMainPage .groupChild {
+    margin: 5px;
+}
+
+input[type=radio]:checked+label{
+    background-color: hsla(218, 5%, 71%, .8);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 4);
+    color: #fff;
+    font-size: 17px;
+    padding: 1px 3px 1px 1px;
+}
+
+.VisualizationMainPage .viewport {
+    position: relative;
+}
+
+.VisualizationMainPage #generalAnimationControlSection {
+    background: var(--control);
+    border-top: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
+    transition: all 0.4s ease 0s;
+}
+
+.VisualizationMainPage #GeneralAnimationControls {
+    padding: 2px 5px;
+}
+
+.VisualizationMainPage #generalAnimationControlSection input[type = button] {
+    background-color: var(--button);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px var(--shadow);
+    color: var(--primary);
+    font-size: 14px;
+    margin: 5px;
+    padding: 8px 16px;
+    transition: all 0.25s ease;
+}
+
+.VisualizationMainPage .pause {
+    background-color: var(--pause-button) !important;
+    border: none !important;
+    color: white !important;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 35px;
+}
+
+.VisualizationMainPage .play {
+    background-color: var(--play-button) !important;
+    border: none !important;
+    color: white !important;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 35px;
+}
+
+.VisualizationMainPage .viewport {
+    background-color: white;
+}
+
+.VisualizationMainPage select {
+    background: var(--button);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    color: var(--primary);
+    cursor: pointer;
+    margin: 6px;
+    padding: 10px 10px 10px 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font: monospace;
+}
+
+
+
+
+
+
+

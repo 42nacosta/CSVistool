@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/CSS/styles.css">
+    <title>CSVisTool</title>
+</head>
+<body data-theme="dark" id="body">
+    <div id="root">
+        <div class = "VisualizationMainPage">
+            <div class="container">
+                <div class="header">
+                    <div id="menu">
+                        <svg id="menu-bar" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" 
+                        class="menu-bar" height="24" width="24" xmlns="http://www.w3.org/2000/svg" 
+                        data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M1.5 3C1.22386 3 1 3.22386 1 3.5C1 3.77614 1.22386 4 1.5 4H13.5C13.7761 4 14 3.77614 
+                        14 3.5C14 3.22386 13.7761 3 13.5 3H1.5ZM1 7.5C1 7.22386 1.22386 7 1.5 7H13.5C13.7761 7 14 7.22386 
+                        14 7.5C14 7.77614 13.7761 8 13.5 8H1.5C1.22386 8 1 7.77614 1 7.5ZM1 11.5C1 11.2239 1.22386 11 1.5 
+                        11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H1.5C1.22386 12 1 11.7761 1 11.5Z" 
+                        fill="currentColor" data-darkreader-inline-fill="" style="--darkreader-inline-fill: currentColor;"></path></svg>
+                    </div>
+                    <div class="gimmicks">
+                        <div id="theme">
+                            <svg id="themeIcon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#3498db" class="rotate-effect" height="26" width="26" xmlns="http://www.w3.org/2000/svg" style="color: rgb(52, 152, 219);"
+                            ><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path></svg>
+                    </div>
+                    </div>
+                    <h1>ArrayList</h1>
+                </div>
+                <div id="menu-container" class="menu hide">
+                    <ul id="menu-list">
+                        <li>
+                            <a href = "/static/HTML/index.html">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" 
+                                width="20" xmlns="http://www.w3.org/2000/svg" data-darkreader-inline-fill="" 
+                                data-darkreader-inline-stroke="" style="--darkreader-inline-fill: currentColor; --darkreader-inline-stroke: currentColor;"
+                                ><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+                                ></path><path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"></path></svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/static/HTML/about.html">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" 
+                                width="20" xmlns="http://www.w3.org/2000/svg" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" 
+                                style="--darkreader-inline-fill: currentColor; --darkreader-inline-stroke: currentColor;"
+                                ><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path></svg>
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/42nacosta/CSVistool">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" 
+                                style="--darkreader-inline-fill: currentColor; --darkreader-inline-stroke: currentColor;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id = "mainContent"> 
+                        <div id="algoControlSection">
+                            <table id="AlgoSpecificControls">
+                                <td>
+                                    <div class="vgroup">
+                                        <div class="hgroup">
+                                            <p class="groupChild">Add</p>
+                                            <input type="Text" class="groupChild" size="4" style="text-align: center;">
+                                            <p class="groupChild">at index</p>
+                                            <input type="Text" class="groupChild" size="4" style="text-align: center;">
+                                        </div>
+                                        <div class="hgroup">
+                                            <input type="button" value="Add to Front" class="groupChild">
+                                            <input type="button" value="Add to Back" class="groupChild">
+                                            <p class="groupChild">or</p>
+                                            <input type="button" value="Add at Index" class="groupChild">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="divisorLeft"></td>
+                                <td class="divisorRight"></td>
+                                <td>
+                                    <div class="vgroup">
+                                        <div class="hgroup">
+                                            <p class="groupChild">Index</p>
+                                            <input type="Text" class="groupChild" size="4" style="text-align: center;">
+                                            <input type="button" value="Remove from Index" class="groupChild" size="4" style="text-align: center;">
+                                        </div>
+                                        <div class="hgroup">
+                                            <p class="groupChild">or&nbsp</p>
+                                            <input type="button" value="Remove from Front" class="groupChild">
+                                            <input type="button" value="Remove from Back" class="groupChild">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="divisorLeft"></td>
+                                <td class="divisorRight"></td>
+                                <td>
+                                    <div class="vgroup">
+                                        <input type="button" value="Random" class="groupChild">
+                                        <input type="button" value="Clear" class="groupChild">
+                                    </div>
+                                </td>
+                            </table>
+                        </div>
+                        <div class="viewport">
+                            <canvas id="canvas" width="1165" height="555"></canvas>
+                        </div>
+                        <div id="generalAnimationControlSection">
+                            <table>
+                                <td>
+                                    <input type="button" value="Skip Back" class="groupChild">
+                                </td>
+                                <td>
+                                    <input type="button" value="Step Back" class="groupChild">
+                                </td>
+                                <td>
+                                    <input type="button" value="Pause" class="pause" id="pause">
+                                </td>
+                                <td>
+                                    <input type="button" value="Skip Forward" class="groupChild">
+                                </td>
+                                <td class="divisorLeft"></td>
+                                <td class="divisorRight"></td>
+                                <td class="txt-node">Canvas height:</td>
+                                <td>
+                                    <input type="Text" value="555" size="4">
+                                </td>
+                                <td>
+                                    <input type="button" value="Change Canvas Size" class="groupChild">
+                                </td>
+                            </table>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="/static/JS/Algorithms/ArrayList.js"></script>
+</body>
+</html>

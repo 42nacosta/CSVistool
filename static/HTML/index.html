@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/CSS/styles.css">
+    <title>CSVisTool</title>
+</head>
+<body data-theme="dark" id="body">
+    <div id="root">
+        <div class="container">
+            <div class="header">
+                <div id="menu">
+                    <svg id="menu-bar" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" 
+                    class="menu-bar" height="24" width="24" xmlns="http://www.w3.org/2000/svg" 
+                    data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;">
+                        <path fill-rule="evenodd" clip-rule="evenodd" 
+                        d="M1.5 3C1.22386 3 1 3.22386 1 3.5C1 3.77614 1.22386 4 1.5 4H13.5C13.7761 4 14 3.77614 
+                        14 3.5C14 3.22386 13.7761 3 13.5 3H1.5ZM1 7.5C1 7.22386 1.22386 7 1.5 7H13.5C13.7761 7 14 7.22386 
+                        14 7.5C14 7.77614 13.7761 8 13.5 8H1.5C1.22386 8 1 7.77614 1 7.5ZM1 11.5C1 11.2239 1.22386 11 1.5 
+                        11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H1.5C1.22386 12 1 11.7761 1 11.5Z" 
+                        fill="currentColor" data-darkreader-inline-fill="" style="--darkreader-inline-fill: currentColor;"></path></svg>
+                </div>
+                <div id="title">
+                    <h1>CS1332 Data Structures Visualization Tool</h1>
+                </div>
+                <div class="gimmicks">
+                    
+                    <div>
+                        <svg id="themeIcon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#3498db" class="rotate-effect" height="26" width="26" xmlns="http://www.w3.org/2000/svg" style="color: rgb(52, 152, 219);"
+                        ><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path></svg>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-container" class="menu hide">
+                <ul id="menu-list">
+                    <li>
+                        <a href = "index.html">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" 
+                            width="20" xmlns="http://www.w3.org/2000/svg" data-darkreader-inline-fill="" 
+                            data-darkreader-inline-stroke="" style="--darkreader-inline-fill: currentColor; --darkreader-inline-stroke: currentColor;"
+                            ><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+                            ></path><path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"></path></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" 
+                            width="20" xmlns="http://www.w3.org/2000/svg" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" 
+                            style="--darkreader-inline-fill: currentColor; --darkreader-inline-stroke: currentColor;"
+                            ><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path></svg>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/42nacosta/CSVistool">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" 
+                            style="--darkreader-inline-fill: currentColor; --darkreader-inline-stroke: currentColor;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class= "content">
+                <div class = "outer-flex">
+                    <div class = "side-panel">
+                        <input class = "filter" placeholder="Search here:" type = "search" value>
+                        <div id="blob-container">
+                        <div id="text-bubble">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="0%" id="blobSvg" transform="rotate(65)" style="opacity: 1; cursor: pointer">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color: rgb(255, 95, 109);"></stop>
+                                        <stop offset="100%" style="stop-color: rgb(255, 195, 113);"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path id="blob" fill="url(gradient)" style="opacity: 1;">
+                                    <animate attributeName="d" dur="9500ms" repeatCount="indefinite" values="M439.43806,316.51312Q432.44085,383.02623,370.39398,407.14258Q308.3471,431.25893,240.13979,459.78516Q171.93248,488.31139,132.30301,426.26451Q92.67355,364.21763,63.21484,307.10882Q33.75613,250,44.06194,178.90151Q54.36774,107.80301,118.67355,75.31613Q182.97935,42.82924,240.60882,72.66602Q298.23828,102.50279,368.10882,107.87054Q437.97935,113.23828,442.20731,181.61914Q446.43527,250,439.43806,316.51312Z;M424.84079,321.86371Q447.86386,393.72743,384.56836,431.15935Q321.27286,468.59128,248.86371,472.84107Q176.45457,477.09086,148.84107,410.1135Q121.22757,343.13614,67.95457,296.56807Q14.68157,250,76.45485,209.5685Q138.22813,169.13699,166.2505,123.59142Q194.27286,78.04585,249.70464,79.81828Q305.13643,81.59072,362.47721,103.93179Q419.818,126.27286,410.81786,188.13643Q401.81772,250,424.84079,321.86371Z;M453.70516,317.0107Q433.36186,384.02139,362.52423,381.146Q291.6866,378.27061,242.8433,399.93801Q194,421.60541,117.08118,412.14317Q40.16237,402.68093,64.29201,326.34046Q88.42165,250,109.0107,206.32693Q129.59975,162.65387,148.64317,78.76495Q167.6866,-5.12397,241.8433,20.74072Q316,46.60541,350.8433,99.17023Q385.6866,151.73505,429.86753,200.86753Q474.04846,250,453.70516,317.0107Z;M437.48517,301.93698Q392.82947,353.87396,357.50371,413.21131Q322.17795,472.54867,247.51112,479.51159Q172.8443,486.47452,129.54819,427.64458Q86.25209,368.81464,81.57785,309.40732Q76.90361,250,83.86283,191.93327Q90.82205,133.86654,141.98146,104.152Q193.14087,74.43745,247.01483,83.88926Q300.88878,93.34106,355.51112,113.62234Q410.13346,133.90361,446.13717,191.95181Q482.14087,250,437.48517,301.93698Z;M460.19079,314.81752Q429.48296,379.63503,366.74655,397.33779Q304.01014,415.04055,238.62673,450.6401Q173.24331,486.23965,141.80231,418.853Q110.3613,351.46635,87.51337,300.73317Q64.66545,250,86.56406,198.80231Q108.46268,147.60462,149.75669,107.39355Q191.05069,67.18248,258.9189,40.41566Q326.7871,13.64883,381.21107,64.45621Q435.63503,115.26359,463.26683,182.63179Q490.89862,250,460.19079,314.81752Z;M469.34657,320.38487Q443.8468,390.76973,373.53877,402.1156Q303.23073,413.46147,238.88463,448.30757Q174.53853,483.15367,122.76833,431.6929Q70.99814,380.23213,76.84563,315.11607Q82.69313,250,78.9227,186.3071Q75.15227,122.6142,131.92223,91.73003Q188.6922,60.84587,253.2305,51.539Q317.7688,42.23213,359.5759,90.92433Q401.383,139.61653,448.11467,194.80827Q494.84633,250,469.34657,320.38487Z;M402.82336,294.74662Q372.52122,339.49324,339.45366,380.77461Q306.3861,422.05598,251.70463,416.9165Q197.02317,411.77702,159.66506,377.28619Q122.30695,342.79537,72.75579,296.39768Q23.20463,250,37.88851,178.24662Q52.57238,106.49324,117.0304,72.97924Q181.48842,39.46525,238.53957,73.79537Q295.59073,108.12549,332.49083,135.50917Q369.39092,162.89286,401.2582,206.44643Q433.12549,250,402.82336,294.74662Z;M439.43806,316.51312Q432.44085,383.02623,370.39398,407.14258Q308.3471,431.25893,240.13979,459.78516Q171.93248,488.31139,132.30301,426.26451Q92.67355,364.21763,63.21484,307.10882Q33.75613,250,44.06194,178.90151Q54.36774,107.80301,118.67355,75.31613Q182.97935,42.82924,240.60882,72.66602Q298.23828,102.50279,368.10882,107.87054Q437.97935,113.23828,442.20731,181.61914Q446.43527,250,439.43806,316.51312Z"></animate>
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "mid-flex">
+                <div class = "inner-flex"> 
+                    <a href = "Algorithms/ArrayList.html" style="text-decoration: none;">
+                        <button class = "button">
+                            <div class = "algo-container">
+                                <div class = "algo-name">ArrayList</div>
+                                <div class = "algo-picture">
+                                    <img alt="ArrayList" src="/Algo-buttons/ArrayList.png">
+                                </div>
+                            </div>
+                        </button>
+                    </a>
+                    <a href = "Algorithms/SinglyLinkedList.html" style="text-decoration: none;">
+                        <button class="button">
+                            <div class = "algo-container">
+                                <div class = "algo-name">Singly Linked List</div>
+                                <div class = "algo-picture">
+                                    <img alt="Singly Linked List" src="/Algo-buttons/SinglyLinkedList.png">
+                                </div>
+                            </div>
+                        </button>
+                    </a>
+                    <a href = "Algorithms/BST.html" style="text-decoration: none;">
+                        <button class="button">
+                            <div class = "algo-container">
+                                <div class = "algo-name">Binary Search Tree</div>
+                                <div class = "algo-picture">
+                                    <img alt="Binary Search Tree" src="/Algo-buttons/BST.png   ">
+                                </div>
+                            </div>
+                        </button>
+                    </a>
+                    <a href = "Algorithms/InsertionSort.html" style="text-decoration: none;">
+                        <button class="button">
+                            <div class = "algo-container">
+                                <div class = "algo-name">Insertion Sort</div>
+                                <div class = "algo-picture">
+                                    <img alt="Insertion Sort" src="/Algo-buttons/InsertionSort.gif">
+                                </div>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        <div class="body"></div>
+        <div class="footer"></div>
+        </div>
+    </div>
+    <script src="/static/JS/index.js"></script>
+</body>
+    
+</html>
